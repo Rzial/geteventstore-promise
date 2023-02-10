@@ -32,8 +32,5 @@ node_modules
 #nyc output
 .nyc_output
 
-# Distribution
-**/dist/*
-
 # Tests
 **/certs/*
