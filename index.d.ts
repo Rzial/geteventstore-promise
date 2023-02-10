@@ -56,6 +56,8 @@ export interface HTTPConfig {
 	port: number;
 	validateServer?: boolean;
 	credentials: UserCredentials;
+	httpAgent?: any;
+	httpsAgent?: any;
 }
 
 export interface TCPConfig extends ConnectionSettings {
