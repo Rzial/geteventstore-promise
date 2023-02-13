@@ -7,8 +7,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _getStreamSubscriptionsInfo = _interopRequireDefault(require("./persistentSubscriptions/getStreamSubscriptionsInfo"));
@@ -78,7 +76,8 @@ var _assert3 = _interopRequireDefault(require("assert"));
 var _url = _interopRequireDefault(require("url"));
 
 var baseErr = 'geteventstore-promise - HTTP client - ';
-var HTTPClient = /*#__PURE__*/(0, _createClass2["default"])(function HTTPClient(config) {
+
+var HTTPClient = function HTTPClient(config) {
   (0, _classCallCheck2["default"])(this, HTTPClient);
   (0, _assert3["default"])(config, "".concat(baseErr, "config not provided"));
   (0, _assert3["default"])(config.hostname, "".concat(baseErr, "hostname property not provided"));
@@ -140,6 +139,7 @@ var HTTPClient = /*#__PURE__*/(0, _createClass2["default"])(function HTTPClient(
     getAllSubscriptionsInfo: (0, _getAllSubscriptionsInfo["default"])(_config, httpClient),
     getStreamSubscriptionsInfo: (0, _getStreamSubscriptionsInfo["default"])(_config, httpClient)
   };
-});
+};
+
 exports["default"] = HTTPClient;
 module.exports = exports.default;

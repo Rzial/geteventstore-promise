@@ -7,8 +7,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _subscribeToStreamFrom = _interopRequireDefault(require("./subscribeToStreamFrom"));
@@ -44,7 +42,8 @@ var _assert = _interopRequireDefault(require("assert"));
 var _url = _interopRequireDefault(require("url"));
 
 var baseErr = 'geteventstore-promise - TCP client - ';
-var TCPClient = /*#__PURE__*/(0, _createClass2["default"])(function TCPClient(config) {
+
+var TCPClient = function TCPClient(config) {
   (0, _classCallCheck2["default"])(this, TCPClient);
   (0, _assert["default"])(config, "".concat(baseErr, "config not provided"));
 
@@ -97,6 +96,7 @@ var TCPClient = /*#__PURE__*/(0, _createClass2["default"])(function TCPClient(co
   this.close = _connectionManager["default"].close(_config);
   this.getPool = _connectionManager["default"].getPool(_config);
   this.closeAllPools = _connectionManager["default"].closeAllPools;
-});
+};
+
 exports["default"] = TCPClient;
 module.exports = exports.default;
